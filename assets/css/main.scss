@@ -1,0 +1,29 @@
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
+
+$body-background-color: rgb(225, 228, 231);
+
+@import "~bulma/sass/utilities/derived-variables";
+@import "~bulma/bulma";
+
+.section-heading {
+  margin-bottom: 2rem;
+}
+
+.usage {
+  margin-bottom: 2rem;
+
+}
+
+.assets {
+  margin-bottom: 2rem;
+}
+
+.image-asset {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 5px 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+a.navbar-item.is-active, .navbar-link.is-active {
+  color: rgb(255, 51, 71);
+}
