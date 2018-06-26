@@ -27,3 +27,7 @@ $body-background-color: rgb(225, 228, 231);
 a.navbar-item.is-active, .navbar-link.is-active {
   color: rgb(255, 51, 71);
 }
+
+.select:not(.is-multiple):not(.is-loading)::after {
+  border-color: rgb(255, 51, 71);
+}
