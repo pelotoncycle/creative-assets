@@ -1386,39 +1386,48 @@ export default {
     ]
 
     const imageTypes = [
+			// {
+			// 	name: "Scenic Rides",
+			// 	nameInCMS: 'This asset is not editable in CMS',
+			// 	description: '',                
+			// 	width: '1920',
+			// 	height: '1080',
+			// 	format: '',        			
+			// 	maxFileSize: '',
+			// 	usage: [
+			// 		{
+			// 			location: 'Bike - More',
+      //       image: '/bike-tread/scenic_rides.png',
+      //       platforms: ['bike-tread']
+			// 		}                                                                            
+      //   ],
+			// 	assets: scenicRides
+      // },
+			// {
+			// 	name: "Scenic Runs",
+			// 	nameInCMS: 'This asset is not editable in CMS',
+			// 	description: '',             
+			// 	width: '1920',
+			// 	height: '1080',
+			// 	format: '',        			
+			// 	maxFileSize: '',
+			// 	usage: [
+			// 		{
+			// 			location: 'Tread - More',
+      //       image: '/bike-tread/scenic_runs.png',
+      //       platforms: ['bike-tread']
+			// 		}                                                                            
+      //   ],
+			// 	assets: scenicRuns
+      // },
 			{
-				name: "Scenic Rides",
+				name: "Outdoor Run Thumbnail",
+				nameInCMS: 'This asset is not editable in CMS',
+				description: 'Outdoor lifestyle image.',              
 				width: '1920',
-				height: '1080',				
-				maxFileSize: '',
-				usage: [
-					{
-						location: 'Bike - More',
-            image: '/bike-tread/scenic_rides.png',
-            platforms: ['bike-tread']
-					}                                                                            
-        ],
-				assets: scenicRides
-      },
-			{
-				name: "Scenic Runs",
-				width: '1920',
-				height: '1080',				
-				maxFileSize: '',
-				usage: [
-					{
-						location: 'Tread - More',
-            image: '/bike-tread/scenic_runs.png',
-            platforms: ['bike-tread']
-					}                                                                            
-        ],
-				assets: scenicRuns
-      },
-			{
-				name: "Outdoor",
-				width: '1920',
-				height: '1080',				
-				maxFileSize: '',
+				height: '1080',
+				format: 'JPG or PNG',        			
+				maxFileSize: '500 kb',
 				usage: [
 					{
 						location: 'iOS - Outdoor Class Detail',
@@ -1434,13 +1443,16 @@ export default {
 				assets: outdoor
       },
 			{
-				name: "Categories",
+				name: "Browse Category",
+				nameInCMS: 'This asset is not editable in CMS',
+				description: 'Black room studio color image. Left side should leave room browse category.',                
 				width: '975',
-				height: '540',				
-				maxFileSize: '',
+				height: '540',
+				format: 'JPG or PNG',
+				maxFileSize: '500 kb',
 				usage: [
 					{
-						location: 'iOS - Class in Progress Modal',
+						location: 'iOS - Classes',
             image: '/ios/classes.png',
             platforms: ['ios']
 					}                                                                            

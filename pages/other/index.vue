@@ -11,9 +11,12 @@ export default {
 		const imageTypes = [
 			{
 				name: "Just Ride",
+				nameInCMS: 'This asset is not editable in CMS',
+				description: '',				
 				width: '380',
-				height: '640',				
-				maxFileSize: '',
+				height: '640',
+				format: 'JPG or PNG',
+				maxFileSize: '500 kb',
 				usage: [
 					{
 						location: 'Bike - More',
@@ -29,9 +32,12 @@ export default {
       },
 			{
 				name: "Just Run",
+				nameInCMS: 'This asset is not editable in CMS',
+				description: '',								
 				width: '342',
-				height: '576',				
-				maxFileSize: '',
+				height: '576',
+				format: 'JPG or PNG',								
+				maxFileSize: '500 kb',
 				usage: [
 					{
 						location: 'Tread - More',
@@ -47,9 +53,12 @@ export default {
       },
 			{
 				name: "Scenic Ride / Run",
+				nameInCMS: 'This asset is not editable in CMS',
+				description: '',								
 				width: '320',
 				height: '520',
-				maxFileSize: '',
+				format: 'JPG or PNG',				
+				maxFileSize: '500 kb',
 				usage: [
 					{
 						location: 'Bike - More',
@@ -69,9 +78,12 @@ export default {
         }]
       },
 			// {
-			// 	name: "iOS Splash Screen",
+			// 	name: "iOS Splash",
+			// 	nameInCMS: 'This asset is not editable in CMS',
+			//	description: '',						
 			// 	width: '',
-			// 	height: '',				
+			// 	height: '',
+			// 	format: '',						
 			// 	maxFileSize: '',
 			// 	usage: [
 			// 		{
@@ -81,7 +93,41 @@ export default {
 			// 		}                                                                            
       //   ],
 			// 	assets: []
-      // }                  																						
+      // },
+			// {
+			// 	name: "Commercial Splash",
+			// 	nameInCMS: 'This asset is not editable in CMS',
+			//	description: '',						
+			// 	width: '',
+			// 	height: '',
+			// 	format: '',						
+			// 	maxFileSize: '',
+			// 	usage: [
+			// 		{
+			// 			location: '',
+			// 			image: '',
+					// platforms: []
+			// 		}                                                                            
+      //   ],
+			// 	assets: []
+      // },
+			// {
+			// 	name: "Peloton 101",
+			// 	nameInCMS: 'This asset is not editable in CMS',
+			//	description: '',						
+			// 	width: '',
+			// 	height: '',
+			// 	format: '',						
+			// 	maxFileSize: '',
+			// 	usage: [
+			// 		{
+			// 			location: '',
+			// 			image: '',
+					// platforms: []
+			// 		}                                                                            
+      //   ],
+			// 	assets: []
+      // }						                																						
 		]
 
 		return {

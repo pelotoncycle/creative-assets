@@ -16,7 +16,13 @@
 			<div class="container">
 				<div class="section-heading">
           <h2 class="is-size-3">{{ imageType.name }}</h2>
-          <p>Dimensions {{ `${imageType.width} x ${imageType.height}` }}</p>
+          <p class="subtitle is-size-6">{{ imageType.description }}</p>
+				</div>
+        <div class="specs">
+          <h3 class="subtitle is-size-4">Specs</h3>
+          <p>Name in CMS: {{ imageType.nameInCMS }}</p>
+          <p>Dimensions: {{ `${imageType.width} x ${imageType.height}` }}</p>
+          <p>Format: {{ imageType.format }}</p>
           <p>Max File Size: {{ imageType.maxFileSize }}</p>
         </div>
         <div class="usage">

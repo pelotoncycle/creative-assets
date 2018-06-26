@@ -6,13 +6,8 @@ $body-background-color: rgb(225, 228, 231);
 @import "~bulma/sass/utilities/derived-variables";
 @import "~bulma/bulma";
 
-.section-heading {
-  margin-bottom: 2rem;
-}
-
-.usage {
+.section-heading, .specs, .usage {
   margin-bottom: 3rem;
-
 }
 
 .assets {
