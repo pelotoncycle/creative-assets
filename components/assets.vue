@@ -8,6 +8,7 @@
             <option value="bike-tread">Bike / Tread</option>
             <option value="ios">iOS</option>
             <option value="web">Web</option>
+            <option value="email">Email</option>
           </select>
         </div>
       </div>

@@ -5,7 +5,7 @@ Vue.use(Router)
 
 const _99f4ff60 = () => import('../pages/workouts/index.vue' /* webpackChunkName: "pages/workouts/index" */).then(m => m.default || m)
 const _716eef72 = () => import('../pages/instructors/index.vue' /* webpackChunkName: "pages/instructors/index" */).then(m => m.default || m)
-const _53e24f4c = () => import('../pages/other/index.vue' /* webpackChunkName: "pages/other/index" */).then(m => m.default || m)
+const _ee33f216 = () => import('../pages/onboarding/index.vue' /* webpackChunkName: "pages/onboarding/index" */).then(m => m.default || m)
 const _17044c4b = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
 
@@ -77,9 +77,9 @@ export function createRouter () {
 			name: "instructors"
 		},
 		{
-			path: "/other",
-			component: _53e24f4c,
-			name: "other"
+			path: "/onboarding",
+			component: _ee33f216,
+			name: "onboarding"
 		},
 		{
 			path: "/",

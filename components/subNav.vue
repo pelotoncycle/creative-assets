@@ -11,8 +11,8 @@
 							<nuxt-link to="/workouts" class="navbar-item is-expanded">
 								Workouts
 							</nuxt-link>
-							<nuxt-link to="/other" class="navbar-item is-expanded">
-								Other
+							<nuxt-link to="/onboarding" class="navbar-item is-expanded">
+								Onboarding
 							</nuxt-link>							
 						</div>
 					</div>

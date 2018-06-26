@@ -12,6 +12,7 @@ export default {
 		let web_instructor_list_display_image_url = []
 		let ios_instructor_list_display_image_url = []
 		let image_url = []
+    let about_image_url = []
     let workout_base_images = [
       {
         name: "Emily DeBouver",
@@ -494,6 +495,125 @@ export default {
         platforms: ['bike-tread', 'ios']
       }
     ]
+    let life_style_image_url = []
+    let instructor_hero_image_url = []
+    let email_share_image = [
+      {
+        name: "Colleen Saidman Yee",
+        image: "https://workout-metric-images-prod.s3.amazonaws.com/fd5b5ea3ee2f4c5a8324fe9afd94d333",
+        platforms: ['email']
+      },
+      {
+        name: "George Hincapie",
+        image: "https://workout-metric-images-prod.s3.amazonaws.com/8257d6ac65ad4ee1b496c83e924b15ed",
+        platforms: ['email']
+      },
+      {
+        name: "Christian Vande Velde",
+        image: "https://workout-metric-images-prod.s3.amazonaws.com/e4408b6236a2445eb7ef8f95c8f62725",
+        platforms: ['email']
+      },
+      {
+        name: "Steven Little",
+        image: "https://workout-metric-images-prod.s3.amazonaws.com/a44819d891a74b3bba922af3fce15bb2",
+        platforms: ['email']
+      },
+      {
+        name: "Matt Wilpers",
+        image: "https://workout-metric-images-prod.s3.amazonaws.com/2a7e34ecb2bb421ab82f1b99cd056aca",
+        platforms: ['email']
+      },
+      {
+        name: "Matty Maggiacomo",
+        image: "https://workout-metric-images-prod.s3.amazonaws.com/f2f86c87af924d84b8ad688646fcb6b2",
+        platforms: ['email']
+      },
+      {
+        name: "Oliver Lee",
+        image: "https://workout-metric-images-prod.s3.amazonaws.com/941f6ee07efe4625b9dc1e5afd42d855",
+        platforms: ['email']
+      },
+      {
+        name: "Chase Tucker",
+        image: "https://workout-metric-images-prod.s3.amazonaws.com/de5c9b21f5f340afbd02c531af5685b4",
+        platforms: ['email']
+      },
+      {
+        name: "Robin Arzon",
+        image: "https://workout-metric-images-prod.s3.amazonaws.com/f0457ee295ad4347ae84331dfcb0c7a2",
+        platforms: ['email']
+      },
+      {
+        name: "Selena Samuela",
+        image: "https://workout-metric-images-prod.s3.amazonaws.com/74f496f6d5e142d6aae42fe8b742f90e",
+        platforms: ['email']
+      },
+      {
+        name: "Alex Toussaint",
+        image: "https://workout-metric-images-prod.s3.amazonaws.com/b006c2065a6a4803b467f5f50c3aa4cc",
+        platforms: ['email']
+      },
+      {
+        name: "Ally Love",
+        image: "https://workout-metric-images-prod.s3.amazonaws.com/b5167b215edb441dafdee6a409b7cb13",
+        platforms: ['email']
+      },
+      {
+        name: "Andy Speer",
+        image: "https://workout-metric-images-prod.s3.amazonaws.com/aed95d1942a14959adbcea9cb44bfdf9",
+        platforms: ['email']
+      },
+      {
+        name: "Christine D'Ercole",
+        image: "https://workout-metric-images-prod.s3.amazonaws.com/3a77f71359de4a7eac3cbd3d8a0221e0",
+        platforms: ['email']
+      },
+      {
+        name: "Cody Rigsby",
+        image: "https://workout-metric-images-prod.s3.amazonaws.com/1a10b7eb4f6c40c7a995a0acea23bb00",
+        platforms: ['email']
+      },
+      {
+        name: "Denis Morton",
+        image: "https://workout-metric-images-prod.s3.amazonaws.com/b2982172ca624ad2a4affed0c205cc4e",
+        platforms: ['email']
+      },
+      {
+        name: "Emma Lovewell",
+        image: "https://workout-metric-images-prod.s3.amazonaws.com/62f8a23759b2417ab3c997528d4de9ae",
+        platforms: ['email']
+      },
+      {
+        name: "Hannah Marie Corbin",
+        image: "https://workout-metric-images-prod.s3.amazonaws.com/8715bb53f07248c5b5767016ce4f3d6c",
+        platforms: ['email']
+      },
+      {
+        name: "Jennifer Jacobs",
+        image: "https://workout-metric-images-prod.s3.amazonaws.com/645076908f9647bab8a4a1dc34949bb0",
+        platforms: ['email']
+      },
+      {
+        name: "Jenn Sherman",
+        image: "https://workout-metric-images-prod.s3.amazonaws.com/235a3c3da28e4fed9e24091ac7487a5b",
+        platforms: ['email']
+      },
+      {
+        name: "Jess King",
+        image: "https://workout-metric-images-prod.s3.amazonaws.com/ed110522e88044049c4cda1ed9e2b297",
+        platforms: ['email']
+      },
+      {
+        name: "Olivia Amato",
+        image: "https://workout-metric-images-prod.s3.amazonaws.com/a3abaa6197d1450fa6169f112c71a3b6",
+        platforms: ['email']
+      },
+      {
+        name: "Rebecca Kennedy",
+        image: "https://workout-metric-images-prod.s3.amazonaws.com/19ecb32c3cd94bc482f84197a2a0657c",
+        platforms: ['email']
+      }
+    ]
 
 		const response = await app.$axios.$get('instructor')
 		const instructors = response.data
@@ -504,6 +624,9 @@ export default {
 			web_instructor_list_display_image_url.push({ name: instructor_name, image: instructor.web_instructor_list_display_image_url, platforms: ['bike-tread', 'web'] })
 			ios_instructor_list_display_image_url.push({ name: instructor_name, image: instructor.ios_instructor_list_display_image_url, platforms: ['ios'] })
 			image_url.push({ name: instructor_name, image: instructor.image_url, platforms: ['bike-tread', 'ios', 'web'] })
+			about_image_url.push({ name: instructor_name, image: instructor.about_image_url, platforms: ['web'] })
+			life_style_image_url.push({ name: instructor_name, image: instructor.life_style_image_url, platforms: ['web'] })
+			instructor_hero_image_url.push({ name: instructor_name, image: instructor.instructor_hero_image_url, platforms: ['web'] })
 		})
 
 		const imageTypes = [
@@ -563,7 +686,7 @@ export default {
 						platforms: ['ios']
           },
 					{
-						location: 'iOS - About Instructor',
+						location: 'iOS - Instructor Detail',
 						image: '/ios/about_instructor.png',
 						platforms: ['ios']
           },
@@ -589,7 +712,7 @@ export default {
 				name: "Facebook Share",
 				nameInCMS: 'Workout Base Images',
 				description: 'B&W image on black background depicting corresponding discipline. Left side should leave room for metrics overlay. Right side should be branded with logomark. CMS can accept multiple images.',				
-				propertyName: 'jumbotron_url_dark',
+				propertyName: '',
 				width: '1200',
 				height: '630',
 				format: 'JPG or PNG',
@@ -619,7 +742,7 @@ export default {
 				maxFileSize: '500 kb',
 				usage: [
 					{
-						location: 'Bike and Tread - About Instructor',
+						location: 'Bike and Tread - Instructor Detail',
 						image: '/bike-tread/about_instructor.png',
 						platforms: ['bike-tread']
           },
@@ -666,7 +789,7 @@ export default {
 				propertyName: 'ios_instructor_list_display_image_url',
 				width: '1524',
 				height: '508',
-				format: 'Silo’ed ⅓ crop of instructor on white background. Right side should leave room for instructor name.',
+				format: 'JPG or PNG',
 				maxFileSize: '500 kb',
 				usage: [
           {
@@ -677,10 +800,78 @@ export default {
         ],
 				assets: ios_instructor_list_display_image_url
 			},
-      // ABOUT IMAGE
-      // LIFESTYLE IMAGE
-      // INSTRUCTOR HERO IMAGE
-      // EMAIL SHARE IMAGE																															
+			{
+				name: "About",
+				nameInCMS: 'About Image',
+				description: '¾ body silo with white background.',	
+				propertyName: 'about_image_url',
+				width: '600',
+				height: '786',
+				format: 'JPG or PNG',
+				maxFileSize: '500 kb',
+				usage: [
+          {
+						location: 'Web - Instructor Questionnaire on Instructor Detail Page',
+						image: '/web/about_instructor_questionnaire.png',
+						platforms: ['web']
+          }                    
+        ],
+				assets: about_image_url
+			},
+			{
+				name: "Lifestyle",
+				nameInCMS: 'Life Style Image',
+				description: 'Lifestyle moment imagery.',
+				propertyName: 'life_style_image_url',
+				width: '3500',
+				height: '2050',
+				format: 'JPG or PNG',
+				maxFileSize: '500 kb',
+				usage: [
+          {
+						location: 'Web - Instructor Quote on Instructor Detail Page',
+						image: '/web/about_instructor_quote.png',
+						platforms: ['web']
+          }                    
+        ],
+				assets: life_style_image_url
+			}, 
+			{
+				name: "Hero",
+				nameInCMS: 'Instructor Hero Image',
+				description: 'Full body on hardware.',
+				propertyName: 'instructor_hero_image_url',
+				width: '1020',
+				height: '1240',
+				format: 'Transparent PNG',
+				maxFileSize: '500 kb',
+				usage: [
+          {
+						location: 'Web - Instructor Detail Page',
+						image: '/web/about_instructor.png',
+						platforms: ['web']
+          }                    
+        ],
+				assets: instructor_hero_image_url
+			},             
+			{
+				name: "Headshot (Email)",
+				nameInCMS: 'Email Share Image',
+				description: 'Headshot image with top of head pop out.',
+				propertyName: '',
+				width: '390',
+				height: '444',
+				format: 'JPG or PNG',
+				maxFileSize: '500 kb',
+				usage: [
+          {
+						location: 'Email - Month in Review',
+						image: '/email/month_in_review.png',
+						platforms: ['email']
+          }
+        ],
+				assets: email_share_image
+			},
 		]
 
 		return {
