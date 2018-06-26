@@ -22,7 +22,7 @@
         <div class="usage">
           <h3 class="is-size-4">Usage</h3>
           <div class="columns is-multiline">
-            <div class="column is-4" v-for="asset in imageType.usage" :key="asset.location" v-show="includesPlatform(asset.platforms)">
+            <div class="column is-4" v-for="asset in imageType.usage" :key="asset.location" v-if="includesPlatform(asset.platforms)">
               <img v-img="{ group: `${imageType.name}-usage` }" :src="getImage(asset.image)"
                 :alt="asset.location"
                 class="image-asset">
@@ -33,7 +33,7 @@
         <div class="assets">
           <h3 class="is-size-4">Assets</h3>
           <div class="columns is-multiline">
-            <div class="column is-one-fifth" v-for="asset in imageType.assets" :key="asset.name" v-show="includesPlatform(asset.platforms)">
+            <div class="column is-one-fifth" v-for="asset in imageType.assets" :key="asset.name" v-if="includesPlatform(asset.platforms)">
               <img 
                 v-if="asset.image != null"
                 v-img="{ group: `${imageType.name}-assets` }"
