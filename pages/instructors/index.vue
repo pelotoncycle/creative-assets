@@ -28,8 +28,8 @@ export default {
 			{
 				name: "Profile Image",
 				propertyName: 'image_url',
-				width: '394',
-				height: '394',				
+				width: '400',
+				height: '400',				
 				maxFileSize: '',
 				usage: [
 					{
@@ -103,8 +103,8 @@ export default {
 			{
 				name: "Workout Base",
 				propertyName: 'jumbotron_url_dark',
-				width: '2048',
-				height: '1536',
+				width: '',
+				height: '',
 				maxFileSize: '',
 				usage: [
 					{
@@ -146,10 +146,10 @@ export default {
 				assets: jumbotron_url_ios
 			},
 			{
-				name: "Instructor List Display (Web)",
+				name: "Instructor List Display (Bike / Tread & Web)",
 				propertyName: 'web_instructor_list_display_image_url',
-				width: '806',
-				height: '394',				
+				width: '1040',
+				height: '508',				
 				maxFileSize: '',
 				usage: [
           {

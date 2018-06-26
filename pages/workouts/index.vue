@@ -1388,8 +1388,8 @@ export default {
     const imageTypes = [
 			{
 				name: "Scenic Rides",
-				width: '394',
-				height: '394',				
+				width: '1920',
+				height: '1080',				
 				maxFileSize: '',
 				usage: [
 					{
@@ -1402,8 +1402,8 @@ export default {
       },
 			{
 				name: "Scenic Runs",
-				width: '394',
-				height: '394',				
+				width: '1920',
+				height: '1080',				
 				maxFileSize: '',
 				usage: [
 					{
@@ -1416,8 +1416,8 @@ export default {
       },
 			{
 				name: "Outdoor",
-				width: '394',
-				height: '394',				
+				width: '1920',
+				height: '1080',				
 				maxFileSize: '',
 				usage: [
 					{
@@ -1435,8 +1435,8 @@ export default {
       },
 			{
 				name: "Categories",
-				width: '394',
-				height: '394',				
+				width: '975',
+				height: '540',				
 				maxFileSize: '',
 				usage: [
 					{

@@ -20,7 +20,7 @@
           <p>Max File Size: {{ imageType.maxFileSize }}</p>
         </div>
         <div class="usage">
-          <h3 class="is-size-4">Usage</h3>
+          <h3 class="subtitle is-size-4">Usage</h3>
           <div class="columns is-multiline">
             <div class="column is-4" v-for="asset in imageType.usage" :key="asset.location" v-if="includesPlatform(asset.platforms)">
               <img v-img="{ group: `${imageType.name}-usage` }" :src="getImage(asset.image)"
@@ -31,7 +31,7 @@
           </div>
         </div>
         <div class="assets">
-          <h3 class="is-size-4">Assets</h3>
+          <h3 class="subtitle is-size-4">Assets</h3>
           <div class="columns is-multiline">
             <div class="column is-one-fifth" v-for="asset in imageType.assets" :key="asset.name" v-if="includesPlatform(asset.platforms)">
               <img 
