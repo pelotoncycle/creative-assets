@@ -18,7 +18,8 @@
     "node-sass": "^4.9.0",
     "nuxt": "^1.0.0",
     "sass-loader": "^7.0.3",
-    "v-img": "^0.2.0"
+    "v-img": "^0.2.0",
+    "vue-scrollactive": "^0.6.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

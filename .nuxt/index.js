@@ -12,8 +12,9 @@ import { setContext, getLocation, getRouteData } from './utils'
 
 
 /* Plugins */
-import nuxt_plugin_axios_2e2de329 from 'nuxt_plugin_axios_2e2de329' // Source: ./axios.js
+import nuxt_plugin_axios_1f2afc1a from 'nuxt_plugin_axios_1f2afc1a' // Source: ./axios.js
 import nuxt_plugin_imagegallery_6f7e2d2a from 'nuxt_plugin_imagegallery_6f7e2d2a' // Source: ../plugins/image-gallery
+import nuxt_plugin_scroll_3c47dc7a from 'nuxt_plugin_scroll_3c47dc7a' // Source: ../plugins/scroll
 
 
 // Component: <no-ssr>
@@ -135,8 +136,9 @@ async function createApp (ssrContext) {
 
   // Plugin execution
   
-  if (typeof nuxt_plugin_axios_2e2de329 === 'function') await nuxt_plugin_axios_2e2de329(app.context, inject)
+  if (typeof nuxt_plugin_axios_1f2afc1a === 'function') await nuxt_plugin_axios_1f2afc1a(app.context, inject)
   if (typeof nuxt_plugin_imagegallery_6f7e2d2a === 'function') await nuxt_plugin_imagegallery_6f7e2d2a(app.context, inject)
+  if (typeof nuxt_plugin_scroll_3c47dc7a === 'function') await nuxt_plugin_scroll_3c47dc7a(app.context, inject)
   
 
   // If server-side, wait for async component to be resolved first

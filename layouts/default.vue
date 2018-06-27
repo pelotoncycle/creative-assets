@@ -1,19 +1,16 @@
 <template>
   <div>
-		<navbar />		
-		<subNav />		
-    <nuxt/>
+		<navbar />
+		<nuxt />
   </div>
 </template>
 
 <script>
 import navbar from '@/components/navbar'
-import subNav from '@/components/subNav'
 
 export default {
 	components: {
 		navbar,
-		subNav
 	}
 }
 </script>

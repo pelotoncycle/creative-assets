@@ -1,10 +1,25 @@
 @import "~bulma/sass/utilities/initial-variables";
 @import "~bulma/sass/utilities/functions";
 
+$body-color: rgb(105, 113, 128);
 $body-background-color: rgb(225, 228, 231);
+$menu-item-active-background-color: rgb(245, 247, 249);
+$menu-item-active-color: rgb(105, 113, 128);
+$menu-item-hover-color: rgb(105, 113, 128);
+$title-color: rgb(105, 113, 128);
+$subtitle-color: 	rgb(105, 113, 128);
 
 @import "~bulma/sass/utilities/derived-variables";
 @import "~bulma/bulma";
+
+.sidebar-column {
+  display: flex;
+  position: sticky;
+  top: 30px;
+  flex-direction: column;
+  height: 100vh;
+  margin-top: 40px;
+}
 
 .section-heading, .specs, .usage {
   margin-bottom: 3rem;

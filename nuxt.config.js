@@ -22,7 +22,8 @@ module.exports = {
 		'@nuxtjs/axios'
   ],
   plugins: [
-    '~/plugins/image-gallery'
+    '~/plugins/image-gallery',
+    '~/plugins/scroll'
   ],
 	axios: {
     baseURL: 'https://qgcdz8g9v0.execute-api.us-east-1.amazonaws.com/beta/api/'
