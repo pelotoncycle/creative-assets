@@ -3,10 +3,10 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const _99f4ff60 = () => import('../pages/workouts/index.vue' /* webpackChunkName: "pages/workouts/index" */).then(m => m.default || m)
-const _716eef72 = () => import('../pages/instructors/index.vue' /* webpackChunkName: "pages/instructors/index" */).then(m => m.default || m)
-const _ee33f216 = () => import('../pages/onboarding/index.vue' /* webpackChunkName: "pages/onboarding/index" */).then(m => m.default || m)
-const _17044c4b = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
+const _2dfd53f4 = () => import('../pages/workouts/index.vue' /* webpackChunkName: "pages/workouts/index" */).then(m => m.default || m)
+const _d28c9408 = () => import('../pages/instructors/index.vue' /* webpackChunkName: "pages/instructors/index" */).then(m => m.default || m)
+const _2f43472b = () => import('../pages/onboarding/index.vue' /* webpackChunkName: "pages/onboarding/index" */).then(m => m.default || m)
+const _dca5dc56 = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
 
 
@@ -68,22 +68,22 @@ export function createRouter () {
     routes: [
 		{
 			path: "/workouts",
-			component: _99f4ff60,
+			component: _2dfd53f4,
 			name: "workouts"
 		},
 		{
 			path: "/instructors",
-			component: _716eef72,
+			component: _d28c9408,
 			name: "instructors"
 		},
 		{
 			path: "/onboarding",
-			component: _ee33f216,
+			component: _2f43472b,
 			name: "onboarding"
 		},
 		{
 			path: "/",
-			component: _17044c4b,
+			component: _dca5dc56,
 			name: "index"
 		}
     ],
