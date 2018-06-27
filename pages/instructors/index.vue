@@ -664,7 +664,27 @@ export default {
 						location: 'Bike and Tread - Live Schedule',
 						image: '/bike-tread/live_schedule.png',
 						platforms: ['bike-tread']
-          },          
+          },
+					{
+						location: 'Bike and Tread - Count Me In Modal',
+						image: '/bike-tread/count_me_in_modal.png',
+						platforms: ['bike-tread']
+          },                    
+					{
+						location: 'Bike and Tread - Class Start Modal',
+						image: '/bike-tread/class_start_modal.png',
+						platforms: ['bike-tread']
+          },                    
+					{
+						location: 'Bike and Tread - Class Resume Modal',
+						image: '/bike-tread/class_resume_modal.png',
+						platforms: ['bike-tread']
+          },                    
+					{
+						location: 'Bike and Tread - Post Class Rating Modal',
+						image: '/bike-tread/post_class_rating_modal.png',
+						platforms: ['bike-tread']
+          },                    
 					{
 						location: 'Bike and Tread - Peloton Instructors',
 						image: '/bike-tread/peloton_instructors_2.png',
@@ -704,7 +724,7 @@ export default {
 						location: 'Web - Live Schedule',
 						image: '/web/live_schedule.png',
 						platforms: ['web']
-					},                                                                             
+					},                                                                           
         ],
 				assets: image_url
 			},      
