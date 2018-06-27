@@ -2,10 +2,10 @@
   <div class="main-wrapper">
     <div class="container">
       <div class="columns">
-        <div class="column is-one-fifth sidebar-column">
+        <div class="column is-4-tablet is-3-desktop is-one-fifth is-hidden-mobile sidebar-column">
           <sideNav :assetTypes="assetTypes" :platforms="platforms" />
         </div>
-        <div class="column is-four-fifths">
+        <div class="column is-8-tablet is-9-desktop is-four-fifths">
           <section class="section">
             <div class="select is-rounded is-pulled-right">
               <select v-model="platforms">
