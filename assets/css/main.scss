@@ -13,12 +13,10 @@ $subtitle-color: 	rgb(105, 113, 128);
 @import "~bulma/bulma";
 
 .sidebar-column {
-  display: flex;
   position: sticky;
-  top: 30px;
-  flex-direction: column;
+  top: 10px;
   height: 100vh;
-  margin-top: 40px;
+  padding-top: 58px;
 }
 
 .section-heading, .specs, .usage {

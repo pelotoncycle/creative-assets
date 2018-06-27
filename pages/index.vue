@@ -1,12 +1,23 @@
 <template>
   <div class="main-wrapper">
-    <div class="container is-fluid">
+    <div class="container">
       <div class="columns">
         <div class="column is-one-fifth sidebar-column">
-          <sideNav :assetTypes="assetTypes" />
+          <sideNav :assetTypes="assetTypes" :platforms="platforms" />
         </div>
         <div class="column is-four-fifths">
-        	<assets :assetTypes="assetTypes" />
+          <section class="section">
+            <div class="select is-rounded is-pulled-right">
+              <select v-model="platforms">
+                <option value="all">All Platforms</option>
+                <option value="bike-tread">Bike / Tread</option>
+                <option value="ios">iOS</option>
+                <option value="web">Web</option>
+                <option value="email">Email</option>
+              </select>
+            </div>
+          </section>
+          <assets :assetTypes="assetTypes" :platforms="platforms" />
         </div>
       </div>
     </div>
@@ -1110,7 +1121,8 @@ export default {
 		]
 
 		return {
-			assetTypes,
+      assetTypes,
+      platforms: 'all'
 		}
 	},
 	components: {

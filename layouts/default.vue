@@ -10,7 +10,7 @@ import navbar from '@/components/navbar'
 
 export default {
 	components: {
-		navbar,
+		navbar
 	}
 }
 </script>
