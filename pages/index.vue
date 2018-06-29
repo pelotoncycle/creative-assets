@@ -648,10 +648,11 @@ export default {
 			{
 				name: 'Headshot',
 				nameInCMS: 'Profile Image',
-				description: 'This image also appears on the studio bike / tread app. Square format (auto-crops to circle in apps) with Off-White (#F5F7F9) background.',
+				description: 'Primary photo for instructors throughout the platform, including on the studio bike / tread app.',
         type: 'image',
         linkId: 'headshot',
 				propertyName: 'image_url',
+        designDescription: 'Square format (auto-crops to circle in apps) with Off-White (#F5F7F9) background.',
 				width: '400',
 				height: '400',
 				format: 'JPG or PNG',		
@@ -748,10 +749,11 @@ export default {
 			{
 				name: "Headshot (Email)",
 				nameInCMS: 'Email Share Image',
-				description: 'Headshot image with top of head pop out.',
+				description: 'Instructor photo in the Month in Review emails.',
         type: 'image',
         linkId: 'headshot-email',
 				propertyName: '',
+        designDescription: 'Headshot image with top of head pop out.',
 				width: '390',
 				height: '444',
 				format: 'JPG or PNG',
@@ -768,10 +770,11 @@ export default {
 			{
 				name: "Instructor List",
 				nameInCMS: 'Instructor List Display (Web)',
-				description: 'Silo’ed ⅓ crop of instructor on Off-White (#F5F7F9) background. Right side should leave room for instructor name.',
+				description: 'Instructor photo on Bike / Tread and Web instructor list.',
         type: 'image',
         linkId: 'instructor-list',
 				propertyName: 'web_instructor_list_display_image_url',
+        designDescription: 'Silo’ed ⅓ crop of instructor on Off-White (#F5F7F9) background. Right side should leave room for instructor name.',
 				width: '1040',
 				height: '508',
 				format: 'JPG or PNG',
@@ -794,10 +797,11 @@ export default {
 			{
 				name: "Instructor List - iOS",
 				nameInCMS: 'Instructor List Display (iOS)',
-				description: '',	
+				description: 'Instructor photo on iOS instructor list.',	
         type: 'image',
         linkId: 'instructor-list-ios',
 				propertyName: 'ios_instructor_list_display_image_url',
+        designDescription: 'Silo’ed ⅓ crop of instructor on White background. Right side should leave room for instructor name.',
 				width: '1524',
 				height: '508',
 				format: 'JPG or PNG',
@@ -815,7 +819,7 @@ export default {
 			{
 				name: "Cover Image",
 				nameInCMS: 'Cover Image (iOS)',
-				description: 'B&W image on white background, left side should leave room for text.',				
+				description: 'Cover image on iOS Featured and Live Class Details screens, as well as the Bike / Tread Instructor Detail screen.',				
         type: 'image',
         linkId: 'cover-image',
 				propertyName: 'jumbotron_url_ios',
@@ -845,10 +849,11 @@ export default {
 			{
 				name: "Hero",
 				nameInCMS: 'Instructor Hero Image',
-				description: 'Full body on hardware.',
+				description: 'Hero image on the Instructor Detail screen on web.',
         type: 'image',
         linkId: 'hero',
 				propertyName: 'instructor_hero_image_url',
+        designDescription: 'Full body on hardware.',
 				width: '1020',
 				height: '1240',
 				format: 'Transparent PNG',
@@ -856,7 +861,7 @@ export default {
         guestInstructorNotes: 'Headshot. 960 x 960.',
 				usage: [
           {
-						location: 'Web - Instructor Detail Page',
+						location: 'Web - Instructor Detail Screen',
 						image: '/web/about_instructor.png',
 						platforms: ['web']
           }                    
@@ -866,17 +871,18 @@ export default {
 			{
 				name: "About",
 				nameInCMS: 'About Image',
-				description: '¾ body silo with white background.',	
+				description: 'Image in the questionnaire section of the Instructor Detail screen on web',	
         type: 'image',
         linkId: 'about',
 				propertyName: 'about_image_url',
+        designDescription: '¾ body silo with white background.',
 				width: '600',
 				height: '786',
 				format: 'JPG or PNG',
 				maxFileSize: '500 kb',
 				usage: [
           {
-						location: 'Web - Instructor Questionnaire on Instructor Detail Page',
+						location: 'Web - Instructor Questionnaire on Instructor Detail Screen',
 						image: '/web/about_instructor_questionnaire.png',
 						platforms: ['web']
           }                    
@@ -886,17 +892,18 @@ export default {
 			{
 				name: "Lifestyle",
 				nameInCMS: 'Life Style Image',
-				description: 'Lifestyle moment imagery.',
+				description: 'Quote background on the Instructor Detail screen',
         type: 'image',
         linkId: 'lifestyle',
 				propertyName: 'life_style_image_url',
+        designDescription: 'Lifestyle moment imagery.',
 				width: '3500',
 				height: '2050',
 				format: 'JPG or PNG',
 				maxFileSize: '500 kb',
 				usage: [
           {
-						location: 'Web - Instructor Quote on Instructor Detail Page',
+						location: 'Web - Instructor Quote on Instructor Detail Screen',
 						image: '/web/about_instructor_quote.png',
 						platforms: ['web']
           }                    
@@ -906,10 +913,11 @@ export default {
 			{
 				name: "Facebook Share (Cycling)",
 				nameInCMS: 'Workout Base Images',
-				description: 'B&W image on black background depicting corresponding discipline. Left side should leave room for metrics overlay. Right side should be branded with logomark. CMS can accept multiple images.',				
+				description: 'Background image on metrics shared to Facebook.',				
         type: 'image',
         linkId: 'fb-share-cycling',
 				propertyName: '',
+        designDescription: 'B&W image on black background depicting corresponding discipline. Left side should leave room for metrics overlay. Right side should be branded with logomark. CMS can accept multiple images.',
 				width: '1200',
 				height: '630',
 				format: 'JPG or PNG',
@@ -931,10 +939,11 @@ export default {
 			{
 				name: "Facebook Share (Running)",
 				nameInCMS: 'Workout Base Images',
-				description: 'B&W image on black background depicting corresponding discipline. Left side should leave room for metrics overlay. Right side should be branded with logomark. CMS can accept multiple images.',				
+				description: 'Background image on metrics shared to Facebook.',				
         type: 'image',
         linkId: 'fb-share-running',
 				propertyName: '',
+        designDescription: 'B&W image on black background depicting corresponding discipline. Left side should leave room for metrics overlay. Right side should be branded with logomark. CMS can accept multiple images.',        
 				width: '1200',
 				height: '630',
 				format: 'JPG or PNG',
@@ -956,10 +965,11 @@ export default {
 			{
 				name: "Facebook Share (Bootcamp)",
 				nameInCMS: 'Workout Base Images',
-				description: 'B&W image on black background depicting corresponding discipline. Left side should leave room for metrics overlay. Right side should be branded with logomark. CMS can accept multiple images.',				
+				description: 'Background image on metrics shared to Facebook.',				
         type: 'image',
         linkId: 'fb-share-bootcamp',
 				propertyName: '',
+        designDescription: 'B&W image on black background depicting corresponding discipline. Left side should leave room for metrics overlay. Right side should be branded with logomark. CMS can accept multiple images.',
 				width: '1200',
 				height: '630',
 				format: 'JPG or PNG',
@@ -981,10 +991,11 @@ export default {
 			{
 				name: "Facebook Share (Floor)",
 				nameInCMS: 'Workout Base Images',
-				description: 'B&W image on black background depicting corresponding discipline. Left side should leave room for metrics overlay. Right side should be branded with logomark. CMS can accept multiple images.',				
+				description: 'Background image on metrics shared to Facebook.',				
         type: 'image',
         linkId: 'fb-share-floor',
 				propertyName: '',
+        designDescription: 'B&W image on black background depicting corresponding discipline. Left side should leave room for metrics overlay. Right side should be branded with logomark. CMS can accept multiple images.',        
 				width: '1200',
 				height: '630',
 				format: 'JPG or PNG',
@@ -1006,9 +1017,10 @@ export default {
 			{
 				name: "Outdoor Run Thumbnail",
 				nameInCMS: 'This asset is not editable in CMS',
-				description: 'Outdoor lifestyle image.',              
+        description: 'Background for outdoor run workouts throughout the iOS app.',
         type: 'image',
         linkId: 'outdoor-run',
+        designDescription: 'Outdoor lifestyle image.',
 				width: '1920',
 				height: '1080',
 				format: 'JPG or PNG',        			
@@ -1040,9 +1052,10 @@ export default {
 			{
 				name: "Browse Category",
 				nameInCMS: 'This asset is not editable in CMS',
-				description: 'Black room studio color image. Left side should leave room browse category.',                
+				description: 'Image used for iOS class category cards.',                
         type: 'image',
         linkId: 'browse-category',
+				designDescription: 'Black room studio color image. Left side should leave room browse category.',
 				width: '975',
 				height: '540',
 				format: 'JPG or PNG',
@@ -1059,7 +1072,7 @@ export default {
 			{
 				name: "Just Ride",
 				nameInCMS: 'This asset is not editable in CMS',
-				description: '',				
+				description: 'Background for Just Ride option on the bike\'s More tab.',				
         type: 'image',
         linkId: 'just-ride',
 				width: '380',
@@ -1082,7 +1095,7 @@ export default {
 			{
 				name: "Just Run",
 				nameInCMS: 'This asset is not editable in CMS',
-				description: '',								
+				description: 'Background for Just Run on the tread\'s More tab.',								
         type: 'image',
         linkId: 'just-run',
 				width: '342',
@@ -1105,7 +1118,7 @@ export default {
 			{
 				name: "Scenic Ride / Run",
 				nameInCMS: 'This asset is not editable in CMS',
-				description: '',								
+				description: 'Background for Scenic Ride option on bike and tread More tab.',								
         type: 'image',
         linkId: 'scenic',
 				width: '320',
@@ -1133,7 +1146,7 @@ export default {
 			{
 				name: "iOS Splash",
 				nameInCMS: 'This asset is not editable in CMS',
-				description: '',						
+				description: 'Background video seen when you first open the iOS app.',						
         type: 'video',
         linkId: 'ios-splash',
 				width: '1024',
@@ -1158,11 +1171,11 @@ export default {
 			{
 				name: "Commercial Splash",
 				nameInCMS: 'This asset is not editable in CMS',
-				description: '',						
+				description: 'Background image on the splash screen for the commercial bike.',						
         type: 'image',
         linkId: 'commercial-splash',
-				width: '',
-				height: '',
+				width: '1920',
+				height: '1080',
 				format: 'JPG or PNG',						
 				maxFileSize: '',
 				usage: [
@@ -1177,11 +1190,11 @@ export default {
 			{
 				name: "Commercial Video",
 				nameInCMS: 'This asset is not editable in CMS',
-				description: '',						
+				description: 'Video users can open from the commercial bike splash screen.',						
         type: 'video',
         linkId: 'commercial-video',
-				width: '',
-				height: '',
+				width: '960',
+				height: '540',
 				format: 'JPG or PNG',						
 				maxFileSize: '',
 				usage: [

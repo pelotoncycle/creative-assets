@@ -12,9 +12,10 @@
       <div class="specs">
         <h3 class="subtitle is-size-4">Specs</h3>
         <p>Name in CMS: {{ assetType.nameInCMS }}</p>
+        <p v-if="assetType.designDescription">Description: {{ assetType.designDescription }}</p>
         <p>Dimensions: {{ `${assetType.width} x ${assetType.height}` }}</p>
         <p>Format: {{ assetType.format }}</p>
-        <p>Max File Size: {{ assetType.maxFileSize }}</p>
+        <p v-if="assetType.maxFileSize">Max File Size: {{ assetType.maxFileSize }}</p>
         <p v-if="assetType.guestInstructorNotes">Guest Instructor Notes: {{ assetType.guestInstructorNotes }}</p>
       </div>
       <div class="usage">
