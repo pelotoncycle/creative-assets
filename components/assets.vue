@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<section class="section"
+		<section class="section asset-section"
       v-for="assetType in assetTypes"
       :key="assetType.propertyName"
       v-show="getPlatforms(assetType.usage)"
@@ -87,3 +87,9 @@ export default {
 	}
 }
 </script>
+
+<style lang="scss" scoped>
+  .asset-section {
+    margin-top: -3rem;
+  }
+</style>

@@ -1,5 +1,5 @@
 <template>
-	<nav class="navbar" role="navigation" aria-label="main navigation">
+	<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
 		<div class="container">
 			<div class="navbar-brand">
 				<a class="navbar-item" href="/">
@@ -7,9 +7,31 @@
 					Peloton Creative Assets
 				</a>
 			</div>
+			<div class="navbar-menu">
+				<div class="navbar-end">
+					<div class="navbar-item">
+						<div class="select is-rounded is-pulled-right">
+							<select v-model="platforms">
+								<option value="all">All Platforms</option>
+								<option value="bike-tread">Bike / Tread</option>
+								<option value="ios">iOS</option>
+								<option value="web">Web</option>
+								<option value="email">Email</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</nav>
 </template>
+
+<script>
+export default {
+	props: ['platforms']
+}
+</script>
+
 
 <style lang="scss" scoped>
 	.navbar {

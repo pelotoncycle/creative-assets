@@ -1,23 +1,15 @@
 <template>
-  <div class="main-wrapper">
-    <div class="container">
-      <div class="columns">
-        <div class="column is-4-tablet is-3-desktop is-one-fifth is-hidden-mobile sidebar-column">
-          <sideNav :assetTypes="assetTypes" :platforms="platforms" />
-        </div>
-        <div class="column is-8-tablet is-9-desktop is-four-fifths">
-          <section class="section">
-            <div class="select is-rounded is-pulled-right">
-              <select v-model="platforms">
-                <option value="all">All Platforms</option>
-                <option value="bike-tread">Bike / Tread</option>
-                <option value="ios">iOS</option>
-                <option value="web">Web</option>
-                <option value="email">Email</option>
-              </select>
-            </div>
-          </section>
-          <assets :assetTypes="assetTypes" :platforms="platforms" />
+  <div>
+    <navbar :platforms="platforms" />
+    <div class="main-wrapper">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-4-tablet is-3-desktop is-one-fifth is-hidden-mobile sidebar-column">
+            <sideNav :assetTypes="assetTypes" :platforms="platforms" />
+          </div>
+          <div class="column is-8-tablet is-9-desktop is-four-fifths assets-column">
+            <assets :assetTypes="assetTypes" :platforms="platforms" />
+          </div>
         </div>
       </div>
     </div>
@@ -25,6 +17,7 @@
 </template>
 
 <script>
+import navbar from '@/components/navbar'
 import sideNav from '@/components/sideNav'
 import assets from '@/components/assets'
 
@@ -1220,8 +1213,15 @@ export default {
 		}
 	},
 	components: {
+    navbar,
 		sideNav,
     assets
 	}
 }
 </script>
+
+<style lang="scss" scoped>
+  .container, .columns {
+    height: 100%;
+  }
+</style>
