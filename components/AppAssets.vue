@@ -89,7 +89,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .asset-section {
-    margin-top: -3rem;
+  .section-heading, .specs, .usage {
+    margin-bottom: 3rem;
   }
+
+  .assets {
+    margin-bottom: 2rem;
+  }
+
+  .image-asset {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 5px 0px;
+    background-color: rgb(255, 255, 255);
+  }  
 </style>

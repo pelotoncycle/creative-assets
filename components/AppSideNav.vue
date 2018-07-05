@@ -1,6 +1,6 @@
 <template>
   <aside class="menu">
-    <scrollactive class="menu-list">  
+    <scrollactive class="menu-list" :offset="48">  
       <a :href="`#${ assetType.linkId }`"
         class="menu-item scrollactive-item"
         v-for="assetType in assetTypes"
@@ -38,5 +38,11 @@ export default {
   } 
 }
 </script>
+
+<style lang="scss" scoped>
+  .menu-item {
+    font-size: .9rem;
+  }
+</style>
 
 
