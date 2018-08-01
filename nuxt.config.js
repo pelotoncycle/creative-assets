@@ -26,8 +26,8 @@ module.exports = {
     '~/plugins/scroll'
   ],
 	axios: {
-    baseURL: 'https://qgcdz8g9v0.execute-api.us-east-1.amazonaws.com/beta/api/'
-	},
+    baseURL: 'https://api.onepeloton.com/api/'
+  }, 
 	router: {
     linkActiveClass: 'is-active'
   },

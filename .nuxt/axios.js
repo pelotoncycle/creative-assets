@@ -113,8 +113,8 @@ export default (ctx, inject) => {
   const axiosOptions = {
     // baseURL
     baseURL : process.browser
-      ? 'https://qgcdz8g9v0.execute-api.us-east-1.amazonaws.com/beta/api/'
-      : (process.env._AXIOS_BASE_URL_ || 'https://qgcdz8g9v0.execute-api.us-east-1.amazonaws.com/beta/api/'),
+      ? 'https://api.onepeloton.com/api/'
+      : (process.env._AXIOS_BASE_URL_ || 'https://api.onepeloton.com/api/'),
 
     // Create fresh objects for all default header scopes
     // Axios creates only one which is shared across SSR requests!

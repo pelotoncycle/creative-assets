@@ -12,7 +12,7 @@ import { setContext, getLocation, getRouteData } from './utils'
 
 
 /* Plugins */
-import nuxt_plugin_axios_1f2afc1a from 'nuxt_plugin_axios_1f2afc1a' // Source: ./axios.js
+import nuxt_plugin_axios_6348ebfe from 'nuxt_plugin_axios_6348ebfe' // Source: ./axios.js
 import nuxt_plugin_imagegallery_6f7e2d2a from 'nuxt_plugin_imagegallery_6f7e2d2a' // Source: ../plugins/image-gallery
 import nuxt_plugin_scroll_3c47dc7a from 'nuxt_plugin_scroll_3c47dc7a' // Source: ../plugins/scroll
 
@@ -136,7 +136,7 @@ async function createApp (ssrContext) {
 
   // Plugin execution
   
-  if (typeof nuxt_plugin_axios_1f2afc1a === 'function') await nuxt_plugin_axios_1f2afc1a(app.context, inject)
+  if (typeof nuxt_plugin_axios_6348ebfe === 'function') await nuxt_plugin_axios_6348ebfe(app.context, inject)
   if (typeof nuxt_plugin_imagegallery_6f7e2d2a === 'function') await nuxt_plugin_imagegallery_6f7e2d2a(app.context, inject)
   if (typeof nuxt_plugin_scroll_3c47dc7a === 'function') await nuxt_plugin_scroll_3c47dc7a(app.context, inject)
   
