@@ -34,12 +34,18 @@
         <div class="columns is-multiline">
           <div class="column is-3" v-for="asset in assetType.assets" :key="asset.name" v-if="includesPlatform(asset.platforms)">
             <div v-if="assetType.type == 'image'">
-              <img 
-                v-if="asset.image != null"
+              <img
+                v-if="asset.image != null && (asset.source == 'api' || asset.source == 's3')"
                 v-img="{ group: `${assetType.name}-assets` }"
                 :src="asset.image"
                 :alt="asset.name"
                 class="image-asset">
+              <img
+                v-else-if="asset.image != null"
+                v-img="{ group: `${assetType.name}-assets` }"
+                :src="getImage(asset.image)"
+                :alt="asset.name"
+                class="image-asset">                
               <img v-else :src="`http://via.placeholder.com/${ assetType.width }x${ assetType.height }?text=No+Image+Found`" class="image-asset">
             </div>
             <div v-else>

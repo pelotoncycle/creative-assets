@@ -1,38 +1,14 @@
 <template>
   <div>
-    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-      <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="/">
-            <svg height="25" width="36" viewBox="0 0 25 36" class="peloton-logo"><path fill-rule="evenodd" d="M20.95 8.533l2.566-4.451a2.724 2.724 0 0 0-.994-3.717 2.715 2.715 0 0 0-3.712.996l-2.565 4.45C10.78 4.085 4.66 6.318 1.676 11.496A12.508 12.508 0 0 0 .704 21.89l4.736-8.218a8.101 8.101 0 0 1 4.948-3.804 8.086 8.086 0 0 1 6.186.816c3.891 2.251 5.23 7.253 2.983 11.151-2.248 3.899-7.242 5.239-11.133 2.988l2.716-4.713c1.3.752 2.96.305 3.711-.996a2.724 2.724 0 0 0-.994-3.717 2.715 2.715 0 0 0-3.712.996L1.48 31.428a2.723 2.723 0 0 0 .995 3.717c1.3.752 2.961.305 3.71-.996l2.567-4.45c5.465 1.725 11.584-.508 14.569-5.686 2.984-5.177 1.855-11.602-2.37-15.48"></path></svg>
-            Peloton Creative Assets
-          </a>
-        </div>
-        <div class="navbar-menu">
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="select is-rounded is-pulled-right">
-                <select v-model="platforms">
-                  <option value="all">All Platforms</option>
-                  <option value="bike-tread">Bike / Tread</option>
-                  <option value="ios">iOS</option>
-                  <option value="web">Web</option>
-                  <option value="email">Email</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
+		<TheNavbar :platforms="platforms" @updatePlatforms="filterPlatforms"/>
     <div class="main-wrapper">
       <div class="container">
         <div class="columns">
           <div class="column is-4-tablet is-3-desktop is-one-fifth is-hidden-mobile sidebar">
-            <AppSideNav :assetTypes="assetTypes" :platforms="platforms" />
+            <AppSideNav :assetTypes="assetTypes" :platforms="platforms"/>
           </div>
           <div class="column is-8-tablet is-9-desktop is-four-fifths assets">
-            <AppAssets :assetTypes="assetTypes" :platforms="platforms" />
+            <AppAssets :assetTypes="assetTypes" :platforms="platforms"/>
           </div>
         </div>
       </div>
@@ -41,9 +17,9 @@
 </template>
 
 <script>
+import TheNavbar from '@/components/TheNavbar'
 import AppSideNav from '@/components/AppSideNav'
 import AppAssets from '@/components/AppAssets'
-import { categories } from '@/constants/categories'
 import { commercial_splash } from '@/constants/commercial_splash'
 import { email_share_image } from '@/constants/email_share_image'
 import { fb_share_bootcamp } from '@/constants/fb_share_bootcamp'
@@ -63,18 +39,32 @@ export default {
     let life_style_image_url = []
     let instructor_hero_image_url = []
 
-		const response = await app.$axios.$get('instructor')
-		const instructors = response.data
+		const instructorResponse = await app.$axios.$get('instructor')
+		const instructors = instructorResponse.data
 
 		instructors.forEach((instructor) => {
 			const instructor_name = instructor.name
-			jumbotron_url_ios.push({ name: instructor_name, image: instructor.jumbotron_url_ios, platforms: ['bike-tread', 'ios'] })
-			web_instructor_list_display_image_url.push({ name: instructor_name, image: instructor.web_instructor_list_display_image_url, platforms: ['bike-tread', 'web'] })
-			ios_instructor_list_display_image_url.push({ name: instructor_name, image: instructor.ios_instructor_list_display_image_url, platforms: ['ios'] })
-			image_url.push({ name: instructor_name, image: instructor.image_url, platforms: ['bike-tread', 'ios', 'web'] })
-			about_image_url.push({ name: instructor_name, image: instructor.about_image_url, platforms: ['web'] })
-			life_style_image_url.push({ name: instructor_name, image: instructor.life_style_image_url, platforms: ['web'] })
-			instructor_hero_image_url.push({ name: instructor_name, image: instructor.instructor_hero_image_url, platforms: ['web'] })
+			jumbotron_url_ios.push({ name: instructor_name, image: instructor.jumbotron_url_ios, platforms: ['bike-tread', 'ios'], source: 'api' })
+			web_instructor_list_display_image_url.push({ name: instructor_name, image: instructor.web_instructor_list_display_image_url, platforms: ['bike-tread', 'web'], source: 'api' })
+			ios_instructor_list_display_image_url.push({ name: instructor_name, image: instructor.ios_instructor_list_display_image_url, platforms: ['ios'], source: 'api' })
+			image_url.push({ name: instructor_name, image: instructor.image_url, platforms: ['bike-tread', 'ios', 'web'], source: 'api' })
+			about_image_url.push({ name: instructor_name, image: instructor.about_image_url, platforms: ['web'], source: 'api' })
+			life_style_image_url.push({ name: instructor_name, image: instructor.life_style_image_url, platforms: ['web'], source: 'api' })
+			instructor_hero_image_url.push({ name: instructor_name, image: instructor.instructor_hero_image_url, platforms: ['web'], source: 'api' })
+		})
+
+		const browseCategoriesResponse = await app.$axios.$get('browse_categories', {
+			params: {
+				library_type: 'on_demand'
+			}
+		})
+		const browseCategories = browseCategoriesResponse.browse_categories.map(cat => {
+			return {
+				name: cat.name,
+				image: cat.portal_image_url,
+				source: 'api',
+				platforms: ['ios']
+			}
 		})
 
 		const assetTypes = [
@@ -500,7 +490,7 @@ export default {
             platforms: ['ios']
 					}                                                                            
         ],
-				assets: categories
+				assets: browseCategories
       },
 			{
 				name: "Just Ride",
@@ -520,8 +510,9 @@ export default {
 					}                                                                            
         ],
 				assets: [{
-          name: 'Just Ride background',
-					image: 'https://raw.githubusercontent.com/pelotoncycle/android/79da932f4dd481d7d52da3116861ada864a13975/ui/src/main/res/drawable-hdpi/freestyle_ride_bg.png?token=AETev9-v2LOaCZF02Rt5n-U5Zqzvi1EYks5bOsKowA%3D%3D',
+					name: 'Just Ride background',
+					// Source: https://github.com/pelotoncycle/android/tree/master/ui/src/main/res/drawable-hdpi
+					image: '/bike-tread/freestyle_ride_bg.png',
 					platforms: ['bike-tread']
         }]
       },
@@ -533,7 +524,7 @@ export default {
         linkId: 'just-run',
 				width: '342',
 				height: '576',
-				format: 'JPG or PNG',								
+				format: 'JPG or PNG',				
 				maxFileSize: '500 kb',
 				usage: [
 					{
@@ -543,8 +534,9 @@ export default {
 					}                                                                            
         ],
 				assets: [{
-          name: 'Just Run background',
-					image: 'https://raw.githubusercontent.com/pelotoncycle/android/b64bfb43a44d9a58be8b33c3e31fc5effca2fd57/ui/src/main/res/drawable-hdpi/freestyle_bg.png?token=AETev3KA08QJU_NiEkA263L-Chpzz3OPks5bOsKIwA%3D%3D',
+					name: 'Just Run background',
+					// Source: https://github.com/pelotoncycle/android/tree/master/ui/src/main/res/drawable-hdpi					
+					image: '/bike-tread/freestyle_ride_bg.png',
 					platforms: ['bike-tread']
         }]
       },
@@ -571,8 +563,9 @@ export default {
 					}                                                               
         ],
 				assets: [{
-          name: 'Scenic Ride / Run background',
-					image: 'https://raw.githubusercontent.com/pelotoncycle/android/7f6c8dcbf998b2275709e1fc80df9a057b70c9c3/ui/src/main/res/drawable-hdpi/scenic_bg.png?token=AETev3hjwg9QRACoQZTJQ1IWVJYLBusyks5bOsJswA%3D%3D',
+					name: 'Scenic Ride / Run background',
+					// Source: https://github.com/pelotoncycle/android/tree/master/ui/src/main/res/drawable-hdpi					
+					image: '/bike-tread/scenic_bg.png',
 					platforms: ['bike-tread']
         }]
       },
@@ -652,7 +645,13 @@ export default {
       platforms: 'all'
 		}
 	},
+	methods: {
+		filterPlatforms(val) {
+			this.platforms = val
+		}
+	},
 	components: {
+		TheNavbar,
 		AppSideNav,
     AppAssets
 	}
@@ -661,20 +660,6 @@ export default {
 
 <style lang="scss" scoped>
   $nav-height: 60px;
-
-	.navbar {
-		background-color: rgb(245, 247, 249);
-		border-bottom: 1px solid rgb(228, 231, 235);
-    height: $nav-height;
-  }
-
-	.peloton-logo {
-		fill: rgb(255, 51, 71);
-  }
-
-  a.navbar-item.is-active, .navbar-link.is-active {
-    color: rgb(255, 51, 71);
-  }
 
   .select:not(.is-multiple):not(.is-loading)::after {
     border-color: rgb(255, 51, 71);
