@@ -16,9 +16,11 @@ module.exports = {
 		{ src: '~assets/css/main.scss', lang: 'scss' }
 	],
 	modules: [
-		'@nuxtjs/axios'
+    '@nuxtjs/axios',
+    ['storyblok-nuxt', { accessToken: 'dskRVokDjUUEXiRBwkPETwtt', cacheProvider: 'memory', timeout: 5000 }]
   ],
   plugins: [
+    '~/plugins/components',
     '~/plugins/image-gallery',
     '~/plugins/scroll'
   ],

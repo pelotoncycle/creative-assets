@@ -13,7 +13,7 @@ let layouts = {
 let resolvedLayouts = {}
 
 export default {
-  head: {"title":"Peloton Creative Assets","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Peloton Creative Assets"},{"name":"robots","content":"noindex, nofollow"}],"link":[{"rel":"icon","type":"image\u002Fpng","href":"\u002Ffavicon.png"}],"style":[],"script":[]},
+  head: {"title":"Peloton Creative Assets","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Peloton Creative Assets"},{"name":"robots","content":"noindex, nofollow"}],"link":[{"rel":"icon","type":"image\u002Fpng","href":"\u002Ffavicon.png"}],"style":[],"script":[{"src":"\u002F\u002Fapp.storyblok.com\u002Ff\u002Fstoryblok-latest.js?t=dskRVokDjUUEXiRBwkPETwtt"}]},
   render(h, props) {
     const loadingEl = h('nuxt-loading', { ref: 'loading' })
     const layoutEl = h(this.layout || 'nuxt')

@@ -11,3 +11,16 @@ $subtitle-color: 	rgb(105, 113, 128);
 
 @import "~bulma/sass/utilities/derived-variables";
 @import "~bulma/bulma";
+
+.section-heading, .specs, .usage {
+  margin-bottom: 3rem;
+}
+
+.assets {
+  margin-bottom: 2rem;
+}
+
+.image-asset {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 5px 0px;
+  background-color: rgb(255, 255, 255);
+} 
