@@ -301,7 +301,7 @@ export default {
         designDescription: '¾ body silo with white background.',
 				width: '600',
 				height: '786',
-				format: 'JPG or PNG',
+				format: 'Transparent PNG',
 				maxFileSize: '500 kb',
 				usage: [
           {
