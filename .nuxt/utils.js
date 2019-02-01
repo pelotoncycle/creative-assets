@@ -116,11 +116,11 @@ export async function setContext(app, context) {
       isDev: true,
       isHMR: false,
       app,
-      
+      store: app.store,
       payload: context.payload,
       error: context.error,
       base: '/',
-      env: {}
+      env: {"airtableEndpointUrl":"https://api.airtable.com","airtableApiKey":"key5dvsSu85IojoQT","airtableBase":"appHR9l7PDijOKqIA"}
     }
     // Only set once
     if (context.req) app.context.req = context.req
