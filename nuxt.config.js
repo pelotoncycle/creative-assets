@@ -23,7 +23,7 @@ module.exports = {
   plugins: ["~/plugins/image-gallery", "~/plugins/scroll"],
   env: {
     airtableEndpointUrl: "https://api.airtable.com",
-    airtableApiKey: process.env.AIRTABLE_API_KEY || "key5dvsSu85IojoQT",
+    airtableApiKey: process.env.AIRTABLE_API_KEY,
     airtableBase: "appHR9l7PDijOKqIA"
   },
   axios: {
